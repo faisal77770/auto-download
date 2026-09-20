@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Video Link Redirect",
+  "version": "0.1.0",
+  "description": "Copy the current video-page URL and open a selected website.",
+  "permissions": ["clipboardWrite"],
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
